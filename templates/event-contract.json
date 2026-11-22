@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "event": "extension.lifecycle.completed",
+  "scope": "workspace",
+  "collection": "opt_in",
+  "properties": {
+    "extension_id": {"type": "string", "classification": "product_metadata"},
+    "action": {"type": "enum", "values": ["enable", "disable"]},
+    "duration_ms": {"type": "integer", "minimum": 0},
+    "success": {"type": "boolean"}
+  },
+  "prohibited": ["tokens", "secrets", "prompt_text", "message_body", "personal_identifiers"]
+}
